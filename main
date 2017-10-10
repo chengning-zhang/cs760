@@ -1,0 +1,49 @@
+install.packages("foreign")
+install.packages("data.tree")
+library(data.tree)
+library(foreign)
+setwd("C:/Users/chengning/Desktop/R/760cs/hw1")
+
+train<-read.arff("heart_train.arff")
+test<-read.arff("heart_test.arff")
+
+#	2. There are no more attributes to be selected
+#	3. There are no more examples in the subset
+#
+
+# Entropy: H(S) - a measure of uncertainty in the set S
+# H(S) = - sum(p(x) * log2(p(x)) for each subset x of S
+#
+
+# ID3: 	The meat of the algorithm
+#		Recursively builds a tree data structure that contians the 
+#		decision tree
+# Note: In order for this implementation to work, all variables in 
+#		the data frame must be factors!
+#ID3 <- function(dataset, target_attr,
+#               
+
+# The prediciton method:
+# This algorithm isn't really useful if we don't have a way to utilize it.
+# This function takes a tree object created from ID3, and traverses it for
+# each item in the test_obs data frame. The classifications for each item
+# is returned.
+#predict_ID3 <- function(test_o
+
+# Data taken from: http://www.cis.temple.edu/~giorgio/cis587/readings/id3-c45.html
+#example <- fu
+
+# Utility functions: REFACTOR ALL BELOW TO COMMON BASE
+# Reports the most frequent factor
+# Code taken from: http://stackoverflow.com/a/8189441/2985170
+#most.frq <- function(nbr.
+
+tree<-Node$new("")
+ID3(tree, train,10)
+print(tree)
+
+
+
+
+
+
